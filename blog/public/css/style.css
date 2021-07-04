@@ -1,0 +1,259 @@
+
+.site_header{
+   height: 100px;
+   background: #0a202b;
+}
+
+.center{
+   position:relative;
+   width: 100%;
+   height: 100%;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+   @media only screen and (min-width: 768px) {
+      .center{
+         width: 738px;
+      }
+   }
+
+   @media only screen and (min-width: 1000px) {
+      .center{
+         width: 960px;
+      }
+   }
+
+   @media only screen and (min-width: 1140px) {
+      .center{
+         width: 1100px;
+      }
+   }
+
+   @media only screen and (min-width: 1640px) {
+      .center{
+         width: 1600px;
+      }
+   }
+.site_logo{
+   display: block;
+   text-decoration: none;
+   outline: none;
+   position: absolute;
+   z-index: 100;
+   top: 32px;
+}
+
+.site_logo::before{
+   content: "";
+   display: inline-block;
+   width: 35px;
+   height: 35px;
+   position: relative;
+   top: 5px;
+   margin: 0 8px 0 0;
+   background: url(/img/laravel.png);
+   background-size: auto;
+   background-size: cover;
+}
+
+.site_logo__short_name{
+   color: #fff4e1;
+   font-family: "Oswald",sans-serif;
+   font-weight: lighter;
+   font-size: 30px;
+}
+
+   /* @media only screen and (min-width: 700px) {
+      .site_logo__short_name{
+         font-size: 20px;
+      }
+   } */
+
+.site_menu{
+   position: absolute;
+   right: 0;
+   top: 50px;
+}
+
+.site_menu__item{
+   margin: 0 0 0 15px;
+   float: left;
+}
+
+   @media only screen and (min-width: 768px) {
+      .site_menu__item{
+         margin: 0 0 0 30px;
+         float: left;
+      }
+   }
+
+.site_menu__link{
+   transition: all .5s;
+   color: #fff4e1;
+   text-decoration: none;
+   font-family: "Oswald",sans-serif;
+   font-size: 16px;
+}
+
+.site_menu__link:hover{
+   color: #65be97;
+}
+
+.page_content{
+   background: #f9f6f0;
+}
+.page_banner{
+   background: #256d4e url(/img/digitization.jpg) center top no-repeat;
+   padding: 75px 0 35px 0;
+}
+.page_banner__title{
+   color: #f9f2e8;
+   font-family: "Oswald",sans-serif;
+   font-weight: 400;
+}
+
+/* Содержательная часть сайта */
+.page_content__padding{
+   padding-bottom: 50px;
+}
+.columns_column{
+   float: left;
+   width: 60%;
+}
+.columns{
+   /* content: "";
+   clear: both; */
+   display: table;
+}
+   .columns_column__list{
+      float: left;
+      width: 40%;
+   }
+   .columns_column__list_sections{
+      background: #d4cfc6;
+      margin-top: 40px;
+      margin-left: 20px;
+      padding: 15px;
+      font-family: "Roboto",sans-serif;
+
+   }
+   .columns_column__list_sections h2{
+      border-bottom: solid 1px #aaa69d;
+      color: #3ea377;
+      font-family: "Oswald",sans-serif;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 1.25;
+      color: #5f5b53;
+   }
+   .columns_column__list_item{
+      padding: 8px 0 8px 8px;
+      background-color: #aaa69d;
+      margin-top: 10px;
+   }
+   .columns_column__list_item a{
+      text-decoration: none;
+      color: #f9f6f0;
+      font-size: 16px;
+   }
+
+   .columns_column__list_item:hover{
+      background-color: #f09f47;
+      transition: all 0.3s;
+      cursor: pointer;
+   }
+
+   .columns_column__list_items{
+      margin-top: 10px;
+   }
+
+.content{
+   color: #595143;
+   font-family: "Roboto",sans-serif;
+   font-size: 18px;
+}
+
+.content h2{
+   margin: 40px 0 25px 0;
+   color: #3ea377;
+   font-family: "Oswald",sans-serif;
+   font-weight: 400;
+   font-size: 24px;
+   line-height: 1.25;
+}
+
+/* Ссылки на для связи */
+.site_footer_links{
+   padding: 30px 0;
+   background: #1a4c37;
+}
+.site_footer_links__content{
+   margin: auto;
+   width: 300px;
+}
+.site_footer_links__list {
+   margin-top: -15px;
+}
+.site_footer_links__item{
+   float: left;
+   width: 25%;
+   /* padding: 0 0 0 50px; */
+   margin: 0 0 0 50px;
+}
+.site_footer_links__link--github{
+   transition: all .15s;
+   display: inline-block;
+   position: relative;
+   padding: 0 0 0 35px;
+   color: #4cb88a;
+   font-family: "Oswald",sans-serif;
+   font-weight: 400;
+   font-size: 16px;
+   text-align: center;
+   text-decoration: none;
+}
+.site_footer_links__link--github::before{
+   content: "";
+   display:block;
+   position: absolute;
+   left: 0;
+   top: -5px;
+   width: 28px;
+   height: 28px;
+   background: url(/img/github.png) center top no-repeat;
+   background-size: cover;
+}
+
+.site_footer_links__link--telegramm{
+   transition: all .15s;
+   display: inline-block;
+   position: relative;
+   padding: 0 0 0 35px;
+   color: #4cb88a;
+   font-family: "Oswald",sans-serif;
+   font-weight: 400;
+   font-size: 16px;
+   text-align: center;
+   text-decoration: none;
+}
+.site_footer_links__link--telegramm::before{
+   content: "";
+   display:block;
+   position: absolute;
+   left: 0;
+   top: -5px;
+   width: 28px;
+   height: 28px;
+   background: url(/img/telegram_icon.png) center top no-repeat;
+   background-size: cover;
+}
+
+.site_footer{
+   padding: 40px 0;
+   background: #226146;
+   color: #4cb88a;
+   font-family: "Roboto",sans-serif;
+   font-size: 14px;
+   text-align: center;
+}
