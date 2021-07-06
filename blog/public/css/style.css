@@ -148,14 +148,21 @@
       color: #5f5b53;
    }
    .columns_column__list_item{
-      padding: 8px 0 8px 8px;
+      /* padding: 8px 0 8px 8px; */
       background-color: #aaa69d;
       margin-top: 10px;
    }
    .columns_column__list_item a{
+      padding: 8px 0 8px 8px;
       text-decoration: none;
       color: #f9f6f0;
       font-size: 16px;
+      display: block;
+   }
+   .columns_column__list_item a:active{
+      background-color: #f09f47;
+      transition: all 0.3s;
+      cursor: pointer;   
    }
 
    .columns_column__list_item:hover{
