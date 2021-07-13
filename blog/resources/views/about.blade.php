@@ -1,11 +1,11 @@
 @extends('layouts.app')
-@section('title-block')О сайте@endsection
-@section('chapter')Hello, world! Привет!@endsection
+@section('title-block')Обо мне@endsection
+@section('chapter')Обо мне@endsection
 
 @section('content-block')
    <div class="columns_column">
       <div class="content">
-         @include('inc.contenthome')
+         @include('inc.about-me')
       </div>
    </div>
 @endsection

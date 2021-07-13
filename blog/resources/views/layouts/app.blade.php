@@ -19,9 +19,10 @@
          <div class="center">
             <div class="page_content__padding">
                <div class="columns">
-                     <!-- content -->
-                  @include('inc.contenthome')   
+                  <!-- content -->
+                  @yield('content-block')
                </div>
+            </div>
          </div>
       </div>
       <script type="text/javascript" src="/js/getLocalHref.js"></script>
