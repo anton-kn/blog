@@ -9,52 +9,46 @@ Route::get('/', function () {
 
 // Страница со статьями о laravel
 Route::get('/laravel', function () {
-   $path = file_get_contents(__DIR__ . "/../resources/views/posts/laravel/arraymap.html");
-   return view('aboutlaravel', [
-      'post' =>$path,
-      'link' => 'laravel'
-   ]);
+    $path = 'laravel'; // папка из resources/posts/laravel
+    return view('aboutLaravel', [
+        'post' => Post::firstPost($path),
+        'path' => $path,
+        'allPosts' => Post::all($path),
+        'slugOne' => null
+    ]);
 });
 
-   Route::get('/laravel/{part}', function ($slug) {
-      $path = __DIR__ . "/../resources/views/posts/laravel/{$slug}.html";
-
-      if (! file_exists($path)) {
-         // dd($path);
-         return redirect('/');
-      }
-
-      $path = file_get_contents($path);
-      return view('aboutlaravel', [
-         'post' => $path,
-         'link' => 'laravel'
-      ]);
-   });
+Route::get('/laravel/{slug}', function ($slug) {
+    $path = 'laravel';
+    $file = Post::find($path, $slug);
+//       ddd($file);
+    return view('aboutLaravel', [
+        'post' => $file,
+        'path' => $path,
+        'allPosts' => Post::all($path),
+        'slugOne' => $slug
+    ]);
+});
 
 // Страница со статьями о PHP
 Route::get('/php', function () {
-    $path = 'php';
-//    ddd(Post::all($path)[0]);
+    $path = 'php'; // папка раздела
    return view('aboutPhp', [
        'post' => Post::firstPost($path),
        'path' => $path,
-       'all' => Post::all($path)
+       'allPosts' => Post::all($path)
    ]);
 });
 
-   Route::get('/php/{part}', function ($slug) {
-      $path = __DIR__ . "/../resources/views/posts/php/{$slug}.html";
-
-      if (! file_exists($path)) {
-         // dd($path);
-         return redirect('/');
-      }
-
-      $path = file_get_contents($path);
-      return view('aboutPHP', [
-         'post' => $path,
-         'link' => 'php'
-      ]);
+   Route::get('/php/{slug}', function ($slug) {
+       $path = 'php';
+       $file = Post::find($path, $slug);
+//       ddd($file);
+       return view('aboutPhp', [
+           'post' => $file,
+           'path' => $path,
+           'allPosts' => Post::all($path)
+       ]);
    });
 
 // главаная страница

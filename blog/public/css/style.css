@@ -52,7 +52,8 @@
    position: relative;
    top: 5px;
    margin: 0 8px 0 0;
-   background: url(/img/laravel.png);
+    padding: 0 25px 5px 0;
+   background: url(/img/laravel-logo-white.png);
    background-size: auto;
    background-size: cover;
 }
@@ -148,21 +149,14 @@
       color: #5f5b53;
    }
    .columns_column__list_item{
-      /* padding: 8px 0 8px 8px; */
+      padding: 8px 0 8px 8px;
       background-color: #aaa69d;
       margin-top: 10px;
    }
    .columns_column__list_item a{
-      padding: 8px 0 8px 8px;
       text-decoration: none;
       color: #f9f6f0;
       font-size: 16px;
-      display: block;
-   }
-   .columns_column__list_item a:active{
-      background-color: #f09f47;
-      transition: all 0.3s;
-      cursor: pointer;   
    }
 
    .columns_column__list_item:hover{
@@ -188,6 +182,13 @@
    font-weight: 400;
    font-size: 24px;
    line-height: 1.25;
+}
+
+code{
+   display: block;
+   font-size: 14px;
+   width: 200px;
+   color: #ca473f;
 }
 
 /* Ссылки на для связи */

@@ -42,6 +42,10 @@ class Post
             })
             ->sortDesc();
     }
+    public static function find($path, $slug)
+    {
+        return static::all($path)->firstWhere('slug', $slug);
+    }
 //    Возвращаем первую (свежую) статью
     public static function firstPost($path)
     {

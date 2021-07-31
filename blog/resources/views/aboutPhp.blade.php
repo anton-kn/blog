@@ -18,7 +18,7 @@
       <div class="columns_column__list_sections">
           <h2>Темы</h2>
           <ul class="columns_column__list_items">
-              @foreach($all as $post)
+              @foreach($allPosts as $post)
                   <li class="columns_column__list_item"><a href="/{!! $path !!}/{!! $post->slug !!}">{!! $post->title
               !!}</a></li>
               @endforeach
