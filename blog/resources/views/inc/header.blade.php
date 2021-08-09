@@ -9,10 +9,10 @@
                <a class="site_menu__link" href="/">Домой</a>
             </li>
             <li class="site_menu__item">
-               <a class="site_menu__link" href="/laravel">Laravel</a>
+               <a class="site_menu__link" href="/categories/laravel">Laravel</a>
             </li>
             <li class="site_menu__item">
-               <a class="site_menu__link" href="/php">PHP</a>
+               <a class="site_menu__link" href="/categories/php">PHP</a>
             </li>
             <li class="site_menu__item">
                <a class="site_menu__link" href="/about">Обо мне</a>
