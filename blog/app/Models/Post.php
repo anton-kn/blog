@@ -10,7 +10,7 @@ class Post extends Model
 {
     use HasFactory;
 
-    protected $with = ['category'];
+//    protected $with = ['category'];
 
     public function category()
     {

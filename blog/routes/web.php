@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Models\Post;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\LoginController;
 
 // главаная страница
 Route::get('/', function () {
@@ -17,5 +18,5 @@ Route::get('/about', function () {
 Route::get('/categories/{category:category}', [PostController::class, 'index']);
 Route::get('/categories/{category:category}/{posts:id}', [PostController::class, 'store']);
 
-//Route::get('/php', [PostController::class, 'indexForPhp']);
-//Route::get('/php/{id}', [PostController::class, 'takeForPhp']);
+Route::get('/admin/login', [LoginController::class, 'index'])->name('register');
+Route::post('/admin/login', [LoginController::class, 'store']);

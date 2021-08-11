@@ -1,0 +1,60 @@
+body{
+   background: #f9f6f0;
+}
+
+.block_sections{
+   width: 35%;
+   margin: 20px;
+   padding: 15px;
+   background: #d4cfc6;
+   font-family: "Roboto",sans-serif;
+   float: left;
+
+}
+
+.block_sections__add_name{
+   margin-bottom: 15px;
+   border-bottom: solid 1px #aaa69d
+}
+.block_sections__title{
+   display: inline-block;
+}
+.block_sections__title h3{
+   font-family: "Oswald",sans-serif;
+   font-weight: 200;
+   font-size: 20px;
+   line-height: 1.25;
+   color: #5f5b53;
+}
+   /* Кнопка для создания модального окна */
+   .button{
+      padding: 5px 30px 5px 30px;
+      margin: 0 0 5px 15px;
+      background-color: #aaa69d;
+      border: none;
+      border-radius: 5px;
+      color: #f9f6f0;
+      cursor: pointer;
+   }
+
+   .button:hover{
+      background-color:#65be97;
+      transition: all 0.3s;
+   }
+
+/* Список разделов */
+.block_sections__item{
+   padding: 8px 0 8px 8px;
+   background-color: #aaa69d;
+   margin-top: 10px;
+}
+.block_sections__item:hover{
+   background-color: #f09f47;
+   transition: all 0.3s;
+   cursor: pointer;
+}
+.block_sections__item a {
+   text-decoration: none;
+   color: #f9f6f0;
+   text-size: 14px;
+}
