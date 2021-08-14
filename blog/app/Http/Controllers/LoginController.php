@@ -18,6 +18,13 @@ class LoginController extends Controller
             'password' => 'required|max:255'
         ]);
 
-        return redirect('/');
+        if( auth()->attempt($request->only('email', 'password')) ){
+            return redirect('/admin/dashboard');
+        }else{
+            return back()->with('status', 'Invalid login details');
+        }
+
+
+
     }
 }
