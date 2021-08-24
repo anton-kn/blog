@@ -149,14 +149,17 @@
       color: #5f5b53;
    }
    .columns_column__list_item{
-      padding: 8px 0 8px 8px;
+      /*padding: 8px 0 8px 8px;*/
       background-color: #aaa69d;
       margin-top: 10px;
    }
    .columns_column__list_item a{
-      text-decoration: none;
-      color: #f9f6f0;
-      font-size: 16px;
+       display: inline-block;
+       text-decoration: none;
+       color: #f9f6f0;
+       font-size: 16px;
+       padding: 10px;
+       width: 100%;
    }
 
    .columns_column__list_item:hover{
@@ -167,6 +170,19 @@
 
    .columns_column__list_items{
       margin-top: 10px;
+   }
+
+   .columns_public{
+       margin-top: 10px;
+       font-family: "Roboto",sans-serif;
+       font-weight: 400;
+       font-size: 12px;
+       line-height: 1.25;
+       color: #5f5b53;
+   }
+   .columns_public p{
+       width: 190px;
+       border-bottom: #5f5b53 1px solid;
    }
 
 .content{

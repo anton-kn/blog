@@ -11,7 +11,7 @@
 <body>
   <section class="container">
     <div class="login">
-      <h1>Войти в личный кабинет</h1>
+      <h1>Вход в личный кабинет</h1>
         @if(session('status'))
             <div style="color: darkred">{{ session('status') }}</div>
         @endif

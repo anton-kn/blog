@@ -8,10 +8,6 @@ use App\Models\Category;
 
 class PostController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
 
     public function index(Category $category)
     {
@@ -20,17 +16,17 @@ class PostController extends Controller
             'posts' => $category->posts,
             'post' => $category->posts->first(), //возвращаем первую статью
             'category' => $category->category
-        ]);
+        ])->with('route', $category->category)->with('route_id', $category->posts->first()->id);
     }
 
     public function showPost(Category $category, Post $posts)
     {
-//        dd($category);
+//        dd($posts->id);
         return view('sheet', [
             'posts' => $category->posts,
             'post' => $posts,
             'category' => $category->category
-        ]);
+        ])->with('route', $category->category)->with('route_id', $posts->id);
     }
     // окно для публикации статьи
     public function dashboard()
@@ -39,21 +35,22 @@ class PostController extends Controller
             'categories' => Category::all()
         ]);
     }
-
+    // записываем статью в БД
     public function publishPost(Request $request)
     {
-//        dd($request->category_id);
         $this->validate($request, [
             'title' => 'required',
             'excerpt' => 'required',
             'body' => 'required',
+            'code' => 'required'
         ]);
 
         Post::create([
             'category_id' => $request->category_id,
             'title' => $request->title,
-            'excerpt' =>$request->excerpt,
-            'body' => $request->body
+            'excerpt' => $request->excerpt,
+            'body' => $request->body,
+            'code' => $request->code
         ]);
 
         return redirect()->route('dashboard')->with('status', 'Запись прошла успешно');

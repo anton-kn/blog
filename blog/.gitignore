@@ -13,3 +13,6 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+/app/Http/Controllers/MyTestController.php
+/resources/views/mytestpage.blade.php
+/app/Models/MyTest.php

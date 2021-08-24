@@ -11,7 +11,17 @@
     <div class="columns_column">
         <div class="content">
             <h2>{{ $post->title }}</h2>
-            {{ $post->body }}
+            <p>{{ $post->body }}</p>
+            @if($post->code != 'null' && $post->code != '')
+                <pre>
+                    <code>
+                        <p>{{ $post->code }}</p>
+                    </code>
+                </pre>
+            @endif
+        </div>
+        <div class="columns_public">
+            <p>Дата публикации: {{ $post->created_at->format('d-m-Y') }}</p>
         </div>
     </div>
     <div class="columns_column__list">
@@ -19,8 +29,12 @@
             <h2>Темы</h2>
             <ul class="columns_column__list_items">
                 @foreach($posts as $post)
-                    <li class="columns_column__list_item"><a href="/categories/{{ $category
-                    }}/{{ $post->id }}">{{ $post->title }}</a></li>
+                    @if($route_id == $post->id)
+                        <li class="columns_column__list_item" style="background-color: #f09f47"><a href="/categories/{{ $category}}/{{ $post->id }}">{{ $post->title }}</a></li>
+                    @else
+                        <li class="columns_column__list_item"><a href="/categories/{{ $category}}/{{ $post->id }}">{{ $post->title }}</a></li>
+                    @endif
+
                 @endforeach
             </ul>
         </div>
