@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
    <head>
+       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta charset="utf-8">
       <link rel="stylesheet" href="/css/style.css">
       <link rel="stylesheet" href="/css/general.css">
@@ -25,7 +26,7 @@
             </div>
          </div>
       </div>
-      <script type="text/javascript" src="/js/getLocalHref.js"></script>
+      <script type="text/javascript" src="/js/index.js"></script>
       <!-- footer -->
       @include('inc.footer')
    </body>

@@ -18,10 +18,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        User::create([
-            'name' => 'anton',
-            'email' => 'antonknjzev@yandex.ru',
-            'password' => Hash::make($password)
+//        User::create([
+//            'name' => 'anton',
+//            'email' => 'antonknjzev@yandex.ru',
+//            'password' => Hash::make($password)
+//        ]);
+
+        Category::create([
+            'category' => 'php'
         ]);
     }
 }

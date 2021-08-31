@@ -14,17 +14,17 @@ class PostController extends Controller
 //        dd($category->posts[0]->title);
         return view('sheet' ,[
             'posts' => $category->posts,
-            'post' => $category->posts->first(), //возвращаем первую статью
+            'postOne' => $category->posts->first(), //возвращаем первую статью
             'category' => $category->category
         ])->with('route', $category->category)->with('route_id', $category->posts->first()->id);
     }
 
     public function showPost(Category $category, Post $posts)
     {
-//        dd($posts->id);
+//        dd($posts->body);
         return view('sheet', [
             'posts' => $category->posts,
-            'post' => $posts,
+            'postOne' => $posts,
             'category' => $category->category
         ])->with('route', $category->category)->with('route_id', $posts->id);
     }

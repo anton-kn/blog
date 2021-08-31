@@ -16,3 +16,5 @@ yarn-error.log
 /app/Http/Controllers/MyTestController.php
 /resources/views/mytestpage.blade.php
 /app/Models/MyTest.php
+/composer.json
+/composer.lock

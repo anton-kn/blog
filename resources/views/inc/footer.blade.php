@@ -3,7 +3,7 @@
       <div class="site_footer_links__content">
          <ul class="site_footer_links__list">
             <li class="site_footer_links__item">
-               <a class="site_footer_links__link--github" href="https://github.com/anton-kn">GitHab</a>
+               <a class="site_footer_links__link--github" href="https://github.com/anton-kn">GitHub</a>
             </li>
             <li class="site_footer_links__item">
                <a class="site_footer_links__link--telegramm" href="https://t.me/antonknyazevv">Telegramm</a>

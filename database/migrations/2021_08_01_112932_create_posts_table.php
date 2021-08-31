@@ -19,6 +19,7 @@ class CreatePostsTable extends Migration
             $table->text('title');
             $table->string('excerpt');
             $table->text('body');
+            $table->text('code');
             $table->timestamps();
         });
     }
